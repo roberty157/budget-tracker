@@ -1,3 +1,5 @@
+//sleepy dawn 2046 on heroku
+
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
@@ -17,6 +19,8 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost/budget", {
   useNewUrlParser: true,
+  useUnifiedTopology:true,
+  useCreateIndex:true,
   useFindAndModify: false
 });
 
